@@ -15,6 +15,7 @@ enum SomeError: Error {
 func rethrowingFunction(_ throwingClosure: () throws -> Void) rethrows {
     do {
         try throwingClosure()
+        try otherThrowingFunction() // ← Compile Error: 引数のクロージャとは関係ない関数がエラーを発生させている
     } catch {
         throw SomeError.convertedError
     }
@@ -26,4 +27,8 @@ do {
     }
 } catch {
     error
+}
+
+func otherThrowingFunction() throws {
+    throw SomeError()
 }
