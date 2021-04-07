@@ -18,14 +18,12 @@ func rethrowingFunction(_ throwingClosure: () throws -> Void) rethrows {
     } catch {
         throw SomeError.convertedError
     }
-    
-    do {
-        try rethrowingFunction {
-            throw SomeError.originalError
-        }
-    } catch {
-        error
-    }
 }
 
-
+do {
+    try rethrowingFunction {
+        throw SomeError.originalError
+    }
+} catch {
+    error
+}
