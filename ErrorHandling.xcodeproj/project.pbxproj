@@ -6,6 +6,10 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		98751552261F510900F46435 /* TryKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98751551261F510900F46435 /* TryKeyword.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		98DD198F261AE0B30065F0A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		98751551261F510900F46435 /* TryKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryKeyword.swift; sourceTree = "<group>"; };
 		98DD1991261AE0B30065F0A6 /* ErrorHandling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ErrorHandling; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DD199C261AE6470065F0A6 /* OptionalErrorHandling1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling1.swift; sourceTree = "<group>"; };
 		98DD19A0261AE7880065F0A6 /* OptionalErrorHandling2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling2.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 				98DD19BE261B051B0065F0A6 /* ThrowsKeyword_Initilizer.swift */,
 				98DD19C1261B06F90065F0A6 /* ThrowsKeyword_closure1.swift */,
 				98DD19CA261B08070065F0A6 /* ThrowsKeyword_closure2.swift */,
+				98751551261F510900F46435 /* TryKeyword.swift */,
 			);
 			path = ThrowsKeyword;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				TargetAttributes = {
 					98DD1990261AE0B30065F0A6 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -181,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98751552261F510900F46435 /* TryKeyword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +313,17 @@
 		98DD1999261AE0B30065F0A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XG9UCHUCSL;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -316,9 +331,15 @@
 		98DD199A261AE0B30065F0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XG9UCHUCSL;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
