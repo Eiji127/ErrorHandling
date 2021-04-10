@@ -1,5 +1,5 @@
 //
-//  UserManager_Result.swift
+//  UserManager_do-catch.swift
 //  ErrorHandling
 //
 //  Created by 白数叡司 on 2021/04/10.
@@ -19,7 +19,7 @@ struct User {
     let email: String
 }
 
-func findUser(byID id: Int) -> Result<User, DatabaseError> {
+func findUser(byID id: Int) throws -> User {
     let users = [
         User(id: 1,
              name: "Yusei Nishiyama",
@@ -31,33 +31,29 @@ func findUser(byID id: Int) -> Result<User, DatabaseError> {
     
     for user in users {
         if user.id == id {
-            return .success(user)
+            return user
         }
     }
-    
-    return .failure(.entryNotFound)
+      
+    throw DatabaseError.entryNotFound
 }
 
-func localPart(formEmail email: String) -> Result<String, DatabaseError> {
+func localPart(formEmail email: String) throws -> String {
     let components = email.components(separatedBy: "@")
     guard components.count == 2 else {
-        return .failure(.invalidEntry(reason: "Invalid email address"))
+        throw DatabaseError.invalidEntry(reason: "Invalid email address")
     }
     
-    return .success(components[0])
+    return components[0]
 }
 
 let userID = 1
-// ↓ switch文のネストが発生し、条件分岐の構造が把握しづらい...
-switch findUser(byID: userID) {
-case .success(let user):
-    switch localPart(formEmail: user.email) {
-    case .success(let localPart):
-        print("Local part: \(localPart)")
-    case .failure(let error):
-        print("Error: \(error)")
-    }
-case .failure(let error):
+// ↓ Result型より命令的、直感的なコードとなる
+do {
+    let user = try findUser(byID: userID)
+    let localPartOfEmail = try localPart(formEmail: user.email)
+    print("Local part: \(localPartOfEmail)")
+} catch {
     print("Error: \(error)")
 }
 
