@@ -1,11 +1,12 @@
 //
-//  TryKeyword.swift
+//  Try!Keyword.swift
 //  ErrorHandling
 //
-//  Created by 白数叡司 on 2021/04/08.
+//  Created by 白数叡司 on 2021/04/10.
 //
 
 import Foundation
+
 
 enum OperationError: Error {
     case overCapacity
@@ -18,14 +19,9 @@ func triple(of int: Int) throws -> Int {
     return int * 3
 }
 
-let int = Int.max
-
-do {
-    let tripleOfInt = try triple(of: int)
-    print("Success: \(tripleOfInt)")
-} catch {
-    print("Error: \(error)")
-}
+let int = 9
+let tripleOfInt = try! triple(of: int) // errorが起きないのを前提にdo-catch文を省くことが可能！
+print(tripleOfInt)
 
 // 出力結果
-// Error: overCapacity
+// 27

@@ -1,8 +1,8 @@
 //
-//  TryKeyword.swift
+//  Try?Keyword.swift
 //  ErrorHandling
 //
-//  Created by 白数叡司 on 2021/04/08.
+//  Created by 白数叡司 on 2021/04/10.
 //
 
 import Foundation
@@ -18,14 +18,9 @@ func triple(of int: Int) throws -> Int {
     return int * 3
 }
 
-let int = Int.max
-
-do {
-    let tripleOfInt = try triple(of: int)
-    print("Success: \(tripleOfInt)")
-} catch {
-    print("Error: \(error)")
+if let triple = try? triple(of: 9) {
+    print(triple)
 }
 
 // 出力結果
-// Error: overCapacity
+// 27
