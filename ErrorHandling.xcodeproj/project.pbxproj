@@ -10,6 +10,7 @@
 		9875155A26216B5D00F46435 /* Try?Keyword_method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875155926216B5D00F46435 /* Try?Keyword_method.swift */; };
 		9875155E26216C3C00F46435 /* Try?Keyword_Initilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875155D26216C3C00F46435 /* Try?Keyword_Initilizer.swift */; };
 		987515612621759B00F46435 /* DeferSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987515602621759A00F46435 /* DeferSentence.swift */; };
+		9875156526217F1A00F46435 /* UserManager_Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875156426217F1A00F46435 /* UserManager_Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		9875155926216B5D00F46435 /* Try?Keyword_method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Try?Keyword_method.swift"; sourceTree = "<group>"; };
 		9875155D26216C3C00F46435 /* Try?Keyword_Initilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Try?Keyword_Initilizer.swift"; sourceTree = "<group>"; };
 		987515602621759A00F46435 /* DeferSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferSentence.swift; sourceTree = "<group>"; };
+		9875156426217F1A00F46435 /* UserManager_Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager_Result.swift; sourceTree = "<group>"; };
 		98DD1991261AE0B30065F0A6 /* ErrorHandling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ErrorHandling; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DD199C261AE6470065F0A6 /* OptionalErrorHandling1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling1.swift; sourceTree = "<group>"; };
 		98DD19A0261AE7880065F0A6 /* OptionalErrorHandling2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling2.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9875156326217E8800F46435 /* TheDiffereceBetweenResultAndDo-Catch */ = {
+			isa = PBXGroup;
+			children = (
+				9875156426217F1A00F46435 /* UserManager_Result.swift */,
+			);
+			path = "TheDiffereceBetweenResultAndDo-Catch";
+			sourceTree = "<group>";
+		};
 		98DD1988261AE0B30065F0A6 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		98DD1993261AE0B30065F0A6 /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
+				9875156326217E8800F46435 /* TheDiffereceBetweenResultAndDo-Catch */,
 				98DD19AD261AEFBA0065F0A6 /* do-catchErrorHandling */,
 				98DD19A7261AEC2C0065F0A6 /* ResultErrorHandling */,
 				98DD19A4261AE8E90065F0A6 /* OptionalErrorHandling */,
@@ -201,6 +212,7 @@
 				9875155E26216C3C00F46435 /* Try?Keyword_Initilizer.swift in Sources */,
 				987515612621759B00F46435 /* DeferSentence.swift in Sources */,
 				9875155A26216B5D00F46435 /* Try?Keyword_method.swift in Sources */,
+				9875156526217F1A00F46435 /* UserManager_Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
