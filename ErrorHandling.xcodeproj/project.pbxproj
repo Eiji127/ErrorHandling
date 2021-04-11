@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		987515752621D2E500F46435 /* UserRegistration_do-catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987515742621D2E500F46435 /* UserRegistration_do-catch.swift */; };
 		9875157A262203E400F46435 /* FatalErrorFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98751579262203E400F46435 /* FatalErrorFunction.swift */; };
+		9875157F2622B7A600F46435 /* AssertionFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875157E2622B7A600F46435 /* AssertionFunction.swift */; };
+		987515832623475200F46435 /* AssertionFailureFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987515822623475200F46435 /* AssertionFailureFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,8 @@
 		9875156A2621D01500F46435 /* UserRegistration_Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistration_Result.swift; sourceTree = "<group>"; };
 		987515742621D2E500F46435 /* UserRegistration_do-catch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserRegistration_do-catch.swift"; sourceTree = "<group>"; };
 		98751579262203E400F46435 /* FatalErrorFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorFunction.swift; sourceTree = "<group>"; };
+		9875157E2622B7A600F46435 /* AssertionFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionFunction.swift; sourceTree = "<group>"; };
+		987515822623475200F46435 /* AssertionFailureFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionFailureFunction.swift; sourceTree = "<group>"; };
 		98DD1991261AE0B30065F0A6 /* ErrorHandling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ErrorHandling; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DD199C261AE6470065F0A6 /* OptionalErrorHandling1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling1.swift; sourceTree = "<group>"; };
 		98DD19A0261AE7880065F0A6 /* OptionalErrorHandling2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalErrorHandling2.swift; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 			path = FatalErrorHandling;
 			sourceTree = "<group>";
 		};
+		9875157D2622B78400F46435 /* AssertionForDebug */ = {
+			isa = PBXGroup;
+			children = (
+				9875157E2622B7A600F46435 /* AssertionFunction.swift */,
+				987515822623475200F46435 /* AssertionFailureFunction.swift */,
+			);
+			path = AssertionForDebug;
+			sourceTree = "<group>";
+		};
 		98DD1988261AE0B30065F0A6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		98DD1993261AE0B30065F0A6 /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
+				9875157D2622B78400F46435 /* AssertionForDebug */,
 				987515782621D76000F46435 /* FatalErrorHandling */,
 				9875156326217E8800F46435 /* TheDiffereceBetweenResultAndDo-Catch */,
 				98DD19AD261AEFBA0065F0A6 /* do-catchErrorHandling */,
@@ -224,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				987515752621D2E500F46435 /* UserRegistration_do-catch.swift in Sources */,
+				9875157F2622B7A600F46435 /* AssertionFunction.swift in Sources */,
 				9875157A262203E400F46435 /* FatalErrorFunction.swift in Sources */,
+				987515832623475200F46435 /* AssertionFailureFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
